@@ -9,3 +9,5 @@ fbset -xres 1366 -yres 768 -depth 16
 printf '\x1F\x3F' | dd of=/dev/fb0 bs=2 count=1000 seek=1000 status=progress
 printf '\x1F\x3F' | dd of=/dev/fb0 bs=2 count=10 seek=10 status=progress
 python3 write_pixel.py
+echo -ne '\x01\xF2\x00\xA0\x00\xE0\x07' > ./ecmcast0
+echo -ne '\x02\xF2\x00\xA0\x00\xE0\x07' > ./ecmcast0
